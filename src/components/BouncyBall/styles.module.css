@@ -1,0 +1,70 @@
+.container {
+  margin: 0.4rem;
+  padding: 1rem 5rem;
+  text-align: center;
+  border: 1px solid rgb(88, 142, 99);
+  border-radius: 2rem;
+  display: flex;
+  background-color: rgb(118, 152, 139);
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.ball {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 5rem;
+  background-color: rgb(173, 222, 222);
+  animation: bounce 8s linear forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  position: relative;
+}
+
+.ball:hover {
+  animation: colorChange 7s;
+  animation: colorChange 1s, bounce 8s linear forwards;
+  animation-iteration-count: infinite, infinite;
+  animation-direction: alternate;
+}
+
+@keyframes bounce {
+  0% {
+    left: 0px;
+    top: -30px;
+  }
+  25% {
+    left: 20px;
+    top: 40px;
+  }
+  50% {
+    left: 20px;
+    top: -40px;
+  }
+  75% {
+    left: 0px;
+    top: 50px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+@keyframes colorChange {
+  0% {
+    background-color: aquamarine;
+  }
+  25% {
+    background-color: orange;
+  }
+  50% {
+    background-color: purple;
+  }
+  75% {
+    background-color: pink;
+  }
+  100% {
+    background-color: grey;
+  }
+}
