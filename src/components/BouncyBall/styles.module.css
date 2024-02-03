@@ -23,8 +23,13 @@
 }
 
 .ball:hover {
-  animation: colorChange 7s;
   animation: colorChange 1s, bounce 8s linear forwards;
+  animation-iteration-count: infinite, infinite;
+  animation-direction: alternate;
+}
+
+.userClicked {
+  animation: bounce 8s linear forwards, breath 2s;
   animation-iteration-count: infinite, infinite;
   animation-direction: alternate;
 }
@@ -66,5 +71,13 @@
   }
   100% {
     background-color: grey;
+  }
+}
+@keyframes breath {
+  0% {
+    width: 5rem;
+  }
+  100% {
+    width: 4.5rem;
   }
 }
